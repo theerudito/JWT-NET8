@@ -1,0 +1,28 @@
+@JWT_Backend_HostAddress = https://localhost:7272
+
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN0cmluZyIsImp0aSI6IjZmNjQyNGNhLWY2N2EtNGFjOS1iNjI2LWMzZjUxY2RkNTc3MyIsImV4cCI6MTcwNTg1MjI3NiwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzI3MiIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0OjcyNzIifQ.ZaSkuVcWdpgnhYFv8g8XMCYfN-UOlS7jbIH0XbLhtzM
+
+GET {{JWT_Backend_HostAddress}}/api/v1/Auth
+Accept: application/json
+Authorization: Bearer {{token}}
+###
+POST {{JWT_Backend_HostAddress}}/api/v1/Auth/login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+###
+POST {{JWT_Backend_HostAddress}}/api/v1/Auth/register
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+
